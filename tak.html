@@ -40,8 +40,8 @@
     <p>Czy chcesz się dowiedzieć, co będziemy robić?</p>
 
     <div class="buttons">
-      <button class="yes" onclick="window.location.href='plan.html'">TAK 😍</button>
-      <button class="no" onclick="keepSecret()">NIE 🙈</button>
+      <button class="yes" onclick="window.location.href='plan.html'">TAK</button>
+      <button class="no" onclick="keepSecret()">NIE</button>
     </div>
 
     <div id="msg"></div>
@@ -52,12 +52,13 @@
     function keepSecret(){
       const msg = document.getElementById("msg");
       const t = [
-        "Okej 🙈 zostawiam tajemnicę… ale jak klikniesz TAK, zdradzę 😄",
-        "Tajemnica zostaje! (na razie) 💌",
+        "Zostawiamy to w tajemnicy… jak klikniesz TAK dowiesz się co będziemy robić",
+        "Tajemnica zostaje! 💌",
         "No dobrze… niespodzianka! 😇"
       ];
       msg.textContent = t[Math.floor(Math.random()*t.length)];
     }
   </script>
 </body>
+
 </html>
