@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Walentynki 💘</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #ffe6ee, #fff);
+}
+
+.card{
+  width:min(520px, 92vw);
+  background:#ffffffcc;
+  border-radius:20px;
+  padding:32px 24px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+  backdrop-filter: blur(6px);
+}
+
+h1{
+  margin:0 0 18px;
+  font-size:26px;
+}
+
+p{
+  margin:0 0 26px;
+  font-size:16px;
+}
+
+.buttons{
+  display:flex;
+  gap:18px;
+  justify-content:center;
+}
+
+button{
+  border:none;
+  border-radius:999px;
+  padding:14px 30px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.yes{
+  background:#ff4d6d;
+  color:white;
+}
+
+.no{
+  background:#f2f2f2;
+  color:#222;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Czy zostaniesz moją Walentynką? 💘</h1>
+  <p>Obiecuję miły wieczór i dobrą niespodziankę 😊</p>
+
+  <div class="buttons">
+    <button class="yes" onclick="goYes()">TAK</button>
+    <button class="no" onclick="sayNo()">NIE</button>
+  </div>
+</div>
+
+<script>
+function goYes(){
+  window.location.href = "tak.html";
+}
+
+function sayNo(){
+  alert("Nie przyjmuje takiej odpowiedzi. Spróbuj jeszcze raz");
+}
+</script>
+
+</body>
+</html>

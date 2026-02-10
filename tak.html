@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mała tajemnica 💞</title>
+  <style>
+    body{
+      margin:0; height:100vh;
+      display:flex; align-items:center; justify-content:center;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #fff, #ffe6ee);
+    }
+    .card{
+      width:min(520px, 92vw);
+      background:#ffffffcc;
+      border:1px solid #ffd1dc;
+      border-radius:18px;
+      padding:28px 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      text-align:center;
+      backdrop-filter: blur(6px);
+    }
+    h1{ margin:0 0 10px; font-size:24px; }
+    p{ margin:0 0 22px; font-size:16px; opacity:.9; }
+    .buttons{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    button{
+      cursor:pointer; border:none; border-radius:999px;
+      padding:12px 22px; font-size:16px; font-weight:600;
+    }
+    .yes{ background:#ff4d6d; color:#fff; }
+    .no{ background:#f2f2f2; color:#222; }
+    #msg{ margin-top:14px; font-size:13px; opacity:.75; min-height:18px; }
+    a{ display:inline-block; margin-top:12px; font-size:14px; opacity:.75; text-decoration:none; color:#222; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Bardzo się cieszę💖</h1>
+    <p>Czy chcesz się dowiedzieć, co będziemy robić?</p>
+
+    <div class="buttons">
+      <button class="yes" onclick="window.location.href='plan.html'">TAK 😍</button>
+      <button class="no" onclick="keepSecret()">NIE 🙈</button>
+    </div>
+
+    <div id="msg"></div>
+    <a href="index.html">← wróć</a>
+  </div>
+
+  <script>
+    function keepSecret(){
+      const msg = document.getElementById("msg");
+      const t = [
+        "Okej 🙈 zostawiam tajemnicę… ale jak klikniesz TAK, zdradzę 😄",
+        "Tajemnica zostaje! (na razie) 💌",
+        "No dobrze… niespodzianka! 😇"
+      ];
+      msg.textContent = t[Math.floor(Math.random()*t.length)];
+    }
+  </script>
+</body>
+</html>
